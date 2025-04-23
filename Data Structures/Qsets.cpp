@@ -21,19 +21,41 @@ typedef pair<ll, ll> pl;
 
 int main()
 {
-    FAST
     #ifndef ONLINE_JUDGE
     auto start = high_resolution_clock::now();
     #endif
 
+    FAST
+    
     //code
+    test
+    {
+        int arr[4];
+        for(int i = 0 ; i  <4 ; i++)
+            cin>>arr[i];
 
-    cout<<"Hulalallala";
+        int q = arr[2]-arr[1];
+        int count = 0 ;
+
+        for(int j = 0 ; j < 4 ;j++)
+            cout<<arr[j]<<" ";
+        cout<<endl;
+        if(q = arr[0]+arr[1])
+            count++;
+        if(arr[3]= q + arr[1])
+            count++;
+        if(arr[4]=arr[3]+q)
+            count++;
+
+        cout<<count<<"\n";
+    }
+
+    
   
     #ifndef ONLINE_JUDGE
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<milliseconds>(stop - start);
-    cerr << "Time: " << duration.count() / 1000.0 << " millis" << endl;
+    cerr << "Time: " << duration.count() << " millis" << endl;
     #endif
     return 0 ;
 }

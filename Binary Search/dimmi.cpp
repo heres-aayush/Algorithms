@@ -14,10 +14,34 @@ using namespace std::chrono;
 typedef long long ll;
 typedef vector<int> vi;
 typedef list<ll> li; 
-typedef vector<ll> vl;
+typedef vector<ll> vl;  
 typedef pair<int,int> pi;
 typedef pair<ll, ll> pl;
 
+
+ll catchY(ll x , ll y , ll yend , ll k , ll  xend)
+{
+    ll num = x;
+    ll count = 0 ;
+   while(x<xend)
+   {
+        if(num>=y && num<=yend)
+        {
+            count++;
+            num = num*k;
+        }
+        else if(num<y)
+        {
+            num = num*k;
+        }
+        else if(num>yend)
+        {
+            num = x++;
+        }
+   }
+   return count; 
+
+}
 
 int main()
 {
@@ -27,8 +51,19 @@ int main()
     #endif
 
     //code
+    test
+    {
+        ll k , l1,r1,l2,r2;
+        cin>>k>>l1>>r1>>l2>>r2; 
+        
+        ll count ;
+       
+            count = catchY(l1 , l2, r2 ,k ,r1);
+        
+        cout<<count<<"\n";
+    }
 
-    cout<<"Hulalallala";
+    
   
     #ifndef ONLINE_JUDGE
     auto stop = high_resolution_clock::now();

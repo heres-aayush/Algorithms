@@ -28,5 +28,11 @@ int main ()
         cout<<"Element not found"<<"\n"; //return end if not found
 
 
+//setting up an iterator
+    set<int> :: iterator it = s.begin();
+    cout<<*it++<<endl;
+    cout<<*it++<<endl;
+
+
 return 0;
 }
